@@ -1,4 +1,15 @@
 @import "reset.css";
 
 
-* {font-family: 'Titillium Web', sans-serif;}
+* {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.form,
+.greetings{
+    display: none;
+}
+
+.showing{
+    display: block;
+}
