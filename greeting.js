@@ -1,9 +1,25 @@
-const form = document.querySelector(".click-form"),
-       input = form.querySelector("input"),
-       greeting = document.querySelector(".clock-greetings");
+const form = document.querySelector(".clock-form"),
+      input = form.querySelector("input"),
+      greeting = document.querySelector(".clock-greetings");
 
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
+
+function saveName(text){
+    localStorage.setItem(USER_LS,text);
+}
+
+function handelSubmit(event){
+    event.preventDefault();
+    const currentValue = input.value;
+    paintGreeting(currentValue);
+    saveName(currentValue);
+}
+
+function askForName(){
+    form.classList.add(SHOWING_CN);
+    form.addEventListener("submit",handelSubmit);
+}
 
 function paintGreeting(text){
     form.classList.remove(SHOWING_CN);
@@ -15,6 +31,8 @@ function loadName(){
     const currentUser = localStorage.getItem(USER_LS);
     if(currentUser === null){
         // not user
+        askForName();
+
     }else{
         // user 
         paintGreeting(currentUser);
@@ -25,3 +43,4 @@ function init(){
     loadName();
 }
 init();
+
