@@ -12,13 +12,13 @@ function saveName(text){
 function handelSubmit(event){
     event.preventDefault();
     const currentValue = input.value;
-    paintGreeting(currentValue);
-    saveName(currentValue);
+    paintGreeting(currentValue);   //remove  and add name
+    saveName(currentValue);  //stored input name
 }
 
 function askForName(){
     form.classList.add(SHOWING_CN);
-    form.addEventListener("submit",handelSubmit);
+    form.addEventListener("submit",handelSubmit);  //enter
 }
 
 function paintGreeting(text){
