@@ -97,6 +97,13 @@ body{
     text-decoration: line-through;
   }
 
+  .weather-container{
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    font-weight: 600;
+    font-size: 120%;
+  }
   
 @keyframes fadeIn{
     from{
