@@ -1,6 +1,6 @@
 # Momentum
  Momentum web application
-[Link to Demo]
+[Link to Demo]("https://edennyk.github.io/momentum/)
 ## Skills
 Vanilla JavaScript / css / html
 ## Descriptions
