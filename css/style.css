@@ -5,24 +5,72 @@
     font-family: 'Titillium Web', sans-serif;
 }
 body{
+    font-size: 100%;
+}
 
-    color: antiquewhite;
-    font-size: 42px;
-    margin: 50px;
+.container{
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+}
+.clock-title{
+    font-size: 10em;
+    margin-bottom: 40px;
+}
+
+.user-form,
+.greetings{
+    display: none;
 
 }
 
-.form,
-.greetings{
-    display: none;
+.user-form input{
+    width: 20%;
+    font-size: 30px;
+    border:none;
+    border-bottom: 4px solid;
+    font-weight: 200;
+    outline: none;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color:transparent;
+    color:white;
+}
+
+.toDo-form input{
+    width: 20%;
+    font-size: 30px;
+    border:none;
+    border-bottom: 4px solid;
+    font-weight: 200;
+    outline: none;
+    margin-bottom: 30px;
+    text-align: center;
+    background-color:transparent;
+    color:white;
+}
+
+::placeholder{
+    opacity: .5;
+    color:white;
 }
 
 .showing{
     display: block;
+    font-size: 4em;
+    margin-bottom: 50px;
 }
 
-.btn{
+.toDo-list span{
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.toDo-list button{
     cursor: pointer;
+    border-radius: 20px;
 }
 
 @keyframes fadeIn{

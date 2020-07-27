@@ -1,6 +1,6 @@
-const form = document.querySelector(".clock-form"),
+const form = document.querySelector(".user-form"),
       input = form.querySelector("input"),
-      greeting = document.querySelector(".clock-greetings");
+      greeting = document.querySelector(".user-greetings");
 
 const USER_LS = "currentUser";
 const SHOWING_CN = "showing";
@@ -24,7 +24,7 @@ function askForName(){
 function paintGreeting(text){
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    greeting.innerText = `Hello, ${text}`;
 }
 
 function loadName(){
