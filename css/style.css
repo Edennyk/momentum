@@ -97,14 +97,20 @@ body{
     text-decoration: line-through;
   }
 
-  .weather-container{
+.weather-container,
+#icon{
     position: absolute;
-    bottom: 3%;
-    right: 3%;
+    top: 3%;
+    left: 92%;
     font-weight: 600;
-    font-size: 120%;
+    font-size: 20px;
+    text-align: center;
+    opacity: .8;
+    display: inline-block;
+    vertical-align: top;
   }
-  
+
+
 @keyframes fadeIn{
     from{
         opacity: 0;

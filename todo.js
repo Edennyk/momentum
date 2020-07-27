@@ -56,21 +56,20 @@ function handelSubmit(event){
 
 function loadToDos(){
 const loadedToDos = localStorage.getItem(TODO_LS);
-if(toDos !== null){
+if(loadedToDos !== null){
     // convert object 
     const parsedToDos = JSON.parse(loadedToDos);
 
     //foreach => run function for all of items in the list
-    parsedToDos.forEach(function(toDos){
-        paintTodo(toDos.text);
+    parsedToDos.forEach(function(toDo){
+        paintTodo(toDo.text);
     })
 }
 
 }
 
 function init(){
-
-    toDoForm.addEventListener("submit", handelSubmit);
     loadToDos();
+    toDoForm.addEventListener("submit", handelSubmit);
 }
 init();

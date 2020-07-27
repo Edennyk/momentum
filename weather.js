@@ -1,17 +1,29 @@
-const container = document.querySelector(".weather-container");
-const APT_KEY = '7feccdabe99537b1615293d551b59446';
+const container = document.querySelector(".weather-container"),
+temperature = document.querySelector(".temperature"),
+ city = document.querySelector(".city"),
+  locationIcon = document.querySelector('.weather-icon');
+
+
+const API_KEY = '7feccdabe99537b1615293d551b59446';
 const COORDS = 'coords';
 
-function getWeather(lat, lng){
+function getWeather(lat, lon){
     // get date 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`).then(function(response){
-        return response.json();
-    }).then(function(json){
-      const locationWeather = json.weather[0].main;
-      const temperature = json.main.temp;
-      const place = json.name;
-      container.innerText = `${locationWeather} ${temperature}°C ${place}`;
-    });
+    fetch(
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(json) {
+
+          const locationWeather = json.weather[0].main;
+          const iconCode = json.weather[0].icon;
+          const iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+          const temperature = json.main.temp;
+          const place = json.name;
+          locationIcon.innerHTML = ("<img src='"+ iconUrl +"'>");
+          container.innerText = `${locationWeather} ${temperature}°C ${place}`;
+        });
 }
 
 function saveCoords(coordsObj){
