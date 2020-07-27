@@ -5,27 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d3427147b8.js" crossorigin="anonymous"></script>
     <title>My Momentum</title>
 </head>
 <body>
     <main class="container">
-        <div class="clock-container">
-            <h1 class="clock-title">00:00</h1>
-        </div>
-    
-        <form action="" class="user-form">
-            <input type="text" placeholder="What is your name?"/>
-        </form>
-        <h4 class="user-greetings greetings"></h4>
-    
-        <form class="toDo-form">
-            <input type="text" placeholder="Write to do"/>
-        </form>
-        <ul class="toDo-list">
-    
-        </ul>
-        <div class="weather"></div>
+        <section class=weather>
+            <div class="weather-container">
+
+            </div>
+        </section>
+        <section class="clock">
+            <div class="clock-container">
+                <h1 class="clock-title">00:00</h1>
+            </div>
+        </section> 
+        <section class="user">
+            <form class="user-form">
+                <input type="text" placeholder="What is your name?"/>
+            </form>
+            <h4 class="user-greetings greetings"></h4>
+        </section>
+        
+        <section class="todo">
+            <form class="toDo-form">
+                <input type="text" placeholder="Write to do"/>
+            </form>
+            <ul class="toDo-list"></ul>
+        </section>
+        
     </main>
     
 

@@ -28,10 +28,12 @@ function paintTodo(text){
     const deleBtn = document.createElement("button");
     const span = document.createElement("span");
     const newId = toDos.length + 1;
-
-    deleBtn.innerText = "X";
+    const checkBox = document.createElement("input");
+    checkBox.type = 'checkbox';
+    deleBtn.innerText = "❌";
     deleBtn.addEventListener("click",deleteTodo);
     span.innerText = text;
+    li.appendChild(checkBox);
     li.appendChild(span);
     li.appendChild(deleBtn);
     li.id = newId;
