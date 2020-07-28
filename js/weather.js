@@ -3,15 +3,7 @@ const container = document.querySelector(".weather-container");
 
 const COORDS = 'coords';
 const API_KEY = '7feccdabe99537b1615293d551b59446';
-const IMG_BASE_URL = "http://openweathermap.org/img/wn/";
 
-function getWeatherImg(imgName) {
-    const imgSrc = `${IMG_BASE_URL}${imgName}@2x.png`;
-    const img = document.createElement("img");
-    img.alt = imgName;
-    img.src = imgSrc;
-    return img;
-  }
 
 function getWeather(lat, lon){
     // get date 
@@ -29,7 +21,7 @@ function getWeather(lat, lon){
           const place = json.name;
 
         //   locationIcon.innerHTML = ("<img src='"+ iconUrl +"'>");
-          container.innerText = `${locationWeather} ${Math.round(temperature)}°C   ${place}`;
+          container.innerText = `${locationWeather}    ${Math.round(temperature)}°C ${place}`;
         });
 }
 
