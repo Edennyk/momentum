@@ -21,10 +21,24 @@ function askForName(){
     form.addEventListener("submit",handelSubmit);  //enter
 }
 
+function getTimeZone(){
+    const date = new Date();
+    const hour = date.getHours();
+
+    if(hour < 12){
+        return "Good Morning";
+    }else if(hour < 18){
+        return "Good Afternoon";
+    }else{
+        return "Good Evening";
+    }
+}
+
 function paintGreeting(text){
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello, ${text}`;
+    const timeZone = getTimeZone();
+    greeting.innerText = `${timeZone}, ${text}`;
 }
 
 function loadName(){

@@ -22,7 +22,7 @@ function getWeather(lat, lon){
           const temperature = json.main.temp;
           const place = json.name;
         //   locationIcon.innerHTML = ("<img src='"+ iconUrl +"'>");
-          container.innerText = `${locationWeather} ${temperature}°C ${place}`;
+          container.innerText = `${locationWeather} ${Math.round(temperature)}°C ${place}`;
         });
 }
 
