@@ -1,7 +1,7 @@
 const container = document.querySelector(".weather-container"),
 temperature = document.querySelector(".temperature"),
- city = document.querySelector(".city"),
-  locationIcon = document.querySelector('.weather-icon');
+ city = document.querySelector(".city");
+//   locationIcon = document.querySelector('.weather-icon');
 
 
 const API_KEY = '7feccdabe99537b1615293d551b59446';
@@ -17,11 +17,11 @@ function getWeather(lat, lon){
         .then(function(json) {
 
           const locationWeather = json.weather[0].main;
-          const iconCode = json.weather[0].icon;
-          const iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+        //   const iconCode = json.weather[0].icon;
+        //   const iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
           const temperature = json.main.temp;
           const place = json.name;
-          locationIcon.innerHTML = ("<img src='"+ iconUrl +"'>");
+        //   locationIcon.innerHTML = ("<img src='"+ iconUrl +"'>");
           container.innerText = `${locationWeather} ${temperature}°C ${place}`;
         });
 }

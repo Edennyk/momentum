@@ -1,4 +1,4 @@
-
+@import "reset.css";
 
 * {
     font-family: 'Titillium Web', sans-serif;
@@ -97,8 +97,7 @@ body{
     text-decoration-color: crimson;
   }
 
-.weather-container,
-#icon{
+.weather-container{
     position: absolute;
     top: 3%;
     left: 92%;
