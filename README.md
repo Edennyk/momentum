@@ -1,5 +1,5 @@
 # Momentum
-Clone Momentum web application
+Momentum web application
 [Link to Demo](https://edennyk.github.io/momentum/)
 ## Skills
 Vanilla JavaScript / css / html
